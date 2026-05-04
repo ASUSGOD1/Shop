@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>闪电卡网 | 自动发卡购物平台</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="site-header">
+            <div class="logo-area">
+                <span class="logo-icon">⚡</span>
+                <h1>闪电卡网</h1>
+            </div>
+            <p class="tagline">虚拟商品 · 自动发卡 · 即时交付</p>
+        </header>
+
+        <main class="main-content">
+            <div class="products-header">
+                <h2>🔥 热卖商品</h2>
+                <span class="stock-badge">实时库存</span>
+            </div>
+            <div id="products-grid" class="products-grid">
+                <!-- 商品卡片由js动态渲染 -->
+                <div class="loading-spinner">加载商品中...</div>
+            </div>
+        </main>
+
+        <!-- 购买浮窗 / 模态框 -->
+        <div id="purchase-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>购买商品</h3>
+                <div id="modal-product-info" class="modal-product-info"></div>
+                <form id="purchase-form">
+                    <div class="form-group">
+                        <label>您的姓名 *</label>
+                        <input type="text" id="buyer-name" placeholder="例如: 张三" required>
+                    </div>
+                    <div class="form-group">
+                        <label>电子邮箱 * (接收卡密)</label>
+                        <input type="email" id="buyer-email" placeholder="your@email.com" required>
+                    </div>
+                    <button type="submit" class="btn-buy-now">确认支付 & 立即发卡</button>
+                    <p class="secure-note">🔒 安全加密 · 付款后自动显示卡密</p>
+                </form>
+                <div id="purchase-result" class="result-area"></div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>⚡ 开源卡网系统 | 自助购物 即买即发 | <a href="https://github.com" target="_blank">GitHub 开源仓库</a></p>
+        </footer>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
