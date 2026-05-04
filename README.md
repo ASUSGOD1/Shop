@@ -21,7 +21,7 @@
 ## 🚀 本地运行
 
 ```bash
-git clone https://github.com/yourname/card-shop.git
-cd card-shop
+git clone https://github.com/yourname/card.git
+cd card
 npm install
 npm start
